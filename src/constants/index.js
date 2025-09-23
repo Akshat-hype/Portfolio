@@ -7,7 +7,7 @@ export const myProjects = [
     subDescription: [
       "USDB is a decentralized, Bitcoin-backed stablecoin designed to bring stability, transparency, and security to digital finance.", "Built on REE, Omnity, and Internet Computer (ICP), it leverages decentralized custody (DPS), on-chain minting, and DAO-driven governance."," With programmable Runes and seamless cross-chain interoperability, USDB empowers users with a stable, scalable, and future-ready digital currency ecosystem.",
     ],
-    href: "",
+    href: "https://github.com/Akshat-hype/USDB.git",
     logo: "",
     image: "/assets/projects/usdb.jpg",
     tags: [
@@ -41,7 +41,7 @@ export const myProjects = [
     subDescription: [
       "Kagzaat is a blockchain-powered platform that redefines document and identity management."," It enables users to store, verify, and share documents seamlessly with security, transparency, and trust at its core."," By leveraging decentralized verification and user-controlled access, Kagzaat eliminates fraud, ensures authenticity, and empowers individuals and organizations with a paperless, tamper-proof future.",
     ],
-    href: "",
+    href: "https://github.com/Akshat-hype/Kagzaat.git",
     logo: "",
     image: "/assets/projects/Kagzaat.png",
     tags: [
@@ -75,7 +75,7 @@ export const myProjects = [
     subDescription: [
       "This ERC-20 token project establishes a versatile digital asset standard on Sepolia, enabling seamless transfers, compatibility with wallets, and integration across DeFi platforms."," Designed with transparency and efficiency in mind, it supports peer-to-peer payments, staking, and ecosystem growth."," By adhering to ERC-20 standards, it ensures interoperability, trust, and easy adoption within the Ethereum community.",
     ],
-    href: "",
+    href: "https://github.com/Akshat-hype/ERC-20_token.git",
     logo: "",
     image: "/assets/projects/ERC.png",
     tags: [

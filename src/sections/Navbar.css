@@ -1,0 +1,153 @@
+/* MAIN NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  /* Glassmorphism */
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 12px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAV CONTAINER */
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.nav-logo {
+  color: white;
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-logo span {
+  color: #4facff;
+}
+
+/* DESKTOP LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 17px;
+  font-weight: 500;
+  color: #d5d5d5;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 6px 0;
+}
+
+/* UNDERLINE EFFECT */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4facff, #96d1ff);
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: #9dd6ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.rotate1 {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.rotate2 {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.hide {
+  opacity: 0;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  width: 260px;
+
+  background: #0e0e0e;
+  padding-top: 100px;
+  transition: 0.4s;
+  box-shadow: -3px 0 20px rgba(0,0,0,0.6);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mobile-link {
+  color: #dcdcdc;
+  font-size: 19px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.mobile-link:hover {
+  color: #4facff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

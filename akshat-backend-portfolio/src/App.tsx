@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { ArrowDownRight, ArrowUpRight, Braces, Check, Code2, Github, Linkedin, Mail, Menu, Radio, Server, Terminal, X, Database, Cpu, Shield, Zap } from 'lucide-react'
 import Universe from './components/Universe'
@@ -41,37 +41,6 @@ function useTypingEffect(texts: string[], speed = 55, pause = 2200) {
   }, [charIndex, isDeleting, textIndex, texts, speed, pause])
 
   return displayed
-}
-
-/** Animated counter */
-function Counter({ target, duration = 2000, suffix = '' }: { target: number; duration?: number; suffix?: string }) {
-  const [count, setCount] = useState(0)
-  const ref = useRef<HTMLSpanElement>(null)
-  const hasAnimated = useRef(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true
-          const start = Date.now()
-          const animate = () => {
-            const elapsed = Date.now() - start
-            const progress = Math.min(elapsed / duration, 1)
-            const eased = 1 - Math.pow(1 - progress, 3)
-            setCount(Math.floor(eased * target))
-            if (progress < 1) requestAnimationFrame(animate)
-          }
-          requestAnimationFrame(animate)
-        }
-      },
-      { threshold: 0.5 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [target, duration])
-
-  return <span ref={ref}>{count}{suffix}</span>
 }
 
 function ProjectCard({ project, onOpen }: { project: Project; onOpen: (project: Project) => void }) {

@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 import About from './components/About.jsx';
+import Achievements from './components/Achievements.jsx';
 import ClientWork from './components/ClientWork.jsx';
+import Community from './components/Community.jsx';
 import Contact from './components/Contact.jsx';
 import CustomCursor from './components/CustomCursor.jsx';
 import Experience from './components/Experience.jsx';
@@ -43,6 +45,8 @@ function App() {
       <Projects setActiveProject={setActiveProject}/>
       <About/>
       <Experience/>
+      <Achievements/>
+      <Community/>
       <ClientWork/>
       <Contact/>
     </main>
@@ -52,3 +56,5 @@ function App() {
 }
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App/></React.StrictMode>);
+
+
